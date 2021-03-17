@@ -24,7 +24,7 @@ week’s goals and/or achievements.
 
 # To run the application do the following:
 
-1. To start the Express JS, go the command line and write: 
+1. To start the Express JS, go to the command line and write: 
 # node app.js
 2. To start the Mongodb, open another command prompt and type 
 # mongod --port 27019
