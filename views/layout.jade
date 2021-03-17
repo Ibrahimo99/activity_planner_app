@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title= title + ' | ' + appname
+    link(rel="stylesheet", href="/stylesheets/style.css")
+    link(rel="stylesheet", href="/bootstrap/bootstrap.css")
+    link(rel="stylesheet", href="/stylesheets/main.css")
+
+  body
+    .container
+      .navbar.navbar-default
+        .container
+          .navbar-header
+            a.navbar-brand(href='/tasks')= appname
+            a.navbar-brand(href='/users')= 'Login'
+      .alert.alert-dismissable
+      p Welcome to my Activity Planner app by&nbsp;
+        a(href='#') @Ibrahim
+        |.
+      block content
+  script(src='/javascripts/jquery.js', type="text/javascript")
+  script(src='/javascripts/main.js', type="text/javascript")

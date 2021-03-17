@@ -1,0 +1,37 @@
+extends layout
+
+block content
+
+block title 
+	title This page is show all users
+
+block content
+	div.container.show-user
+
+		div.row.user-info
+			div.col.s8.offset-s2.card-panel.z-depth-4
+				div.row.center.title
+					h5 User Information
+				table.highlight.responsive-table
+					thead
+						tr
+							th First Name
+							th Last Name
+							th Email
+							th Username
+							th Action
+					tbody
+						each user in users
+							tr
+								td= user.firstName
+								td= user.lastName
+								td= user.email
+								td= user.username
+								td 
+									a#edit.waves-effect.waves-light.btn.custom-btn(href='#') Edit
+
+
+block custom_script
+	script.
+		$(function() {
+		});

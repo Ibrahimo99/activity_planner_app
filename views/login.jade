@@ -1,0 +1,45 @@
+extends layout
+
+block title 
+	title= title
+
+block content
+	div.container.login
+		div.overlay-loading.hide
+		div.row.login-form
+			div.col.s4.offset-s4.card-panel.z-depth-4
+				form(name='login', method='POST', action='/login')
+					div.row.no-margin-bottom
+						div.input-field.col.s12
+							i.material-icons.prefix 
+							label(for='username') Username
+							div.input-field.col.s12
+							input(type='text', name='username')
+							
+					div.row.no-margin-bottom
+						div.input-field.col.s12
+							i.material-icons.prefix 
+							label(for='password') Password
+							div.input-field.col.s12
+							input(type='password', name='password')
+							
+					div.row
+						div.input-field.col.s12
+							input#remember(type='checkbox')
+							label(for='remember') Remember Me
+					div.row
+						div.input-field.col.s12
+							button.waves-effect.waves-light.btn.custom-btn(type='submit') Login
+				div.row.center
+					div.input-field.col.s12
+						a.register.modal-trigger(href='/register') Register
+					//- div.input-field.col.s6
+					//- 	a.forgot-password(href='#') Forgot Password ?
+		div.preloader-wrapper.big.active.hide.custom-loader
+				div.spinner-layer.spinner-blue-only
+					div.circle-clipper.left
+						div.circle
+					div.gap-patch
+						dic.circle
+					div.circle-clipper.right
+						div.circle

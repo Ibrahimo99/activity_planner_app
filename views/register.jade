@@ -1,0 +1,37 @@
+extends layout
+
+block content
+
+
+  div.container.register
+    div.row.register-form
+      div.col.s6.offset-s3.card-panel.z-depth-4
+        div.row.center.title
+        form#form_register(name='register', method='POST', action='/register')
+          div.col.s12
+            div.row
+                div.input-field.col.s6
+                label(for='username') Username
+                div.input-field.col.s6
+                input(type='text', name='username')
+                div.input-field.col.s6
+                label(for='password') Password
+                div.input-field.col.s6
+                input(type='password', name='password')
+            div.row
+              div.input-field.col.s6
+                label(for='firstname') First Name
+                div.input-field.col.s6
+                input(type='text', name='firstName')
+              div.input-field.col.s6
+                label(for='lastname') Last Name
+                div.input-field.col.s6
+                input(type='text', name='lastName')
+            div.row
+              div.input-field.col.s12
+                label(for='email') Email
+                div.input-field.col.s6
+                input(type='email', name='email')
+            div.row
+              div.input-field.col.s12.center
+                button.waves-effect.waves-light.btn.custom-btn(type='submit') Register
