@@ -20,3 +20,11 @@ which they were planned.
  Users should be able to share a weekly plan with other users by sending a link to a week’s
 training schedule. You can assume that anyone who has the link has permission to see that
 week’s goals and/or achievements.
+
+
+# To run the application do the following:
+
+1. To start the Express JS, go the command line and write: 
+# node app.js
+3. To start the Mongodb, open another command prompt and type 
+# mongod --port 27019
