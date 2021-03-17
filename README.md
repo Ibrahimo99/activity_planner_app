@@ -4,7 +4,7 @@ The application allows the user to define their own training schedule for each w
 application can also record their actual achievements. These training goals and achievements are
 private, i.e. they are only visible to this logged in user.
 The properties of a weekly training plan can be designed by you but should at least consist of:
- The dates of the week.
+* The dates of the week*.
  A breakdown of the exercise goals for this week. There should be at least three fitness goals
 for each week, but more can be added.
  The actual achievements against the goals.
