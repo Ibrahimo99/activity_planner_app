@@ -9,7 +9,7 @@ The properties of a weekly training plan can be designed by you but should at le
 for each week, but more can be added.
 * The actual achievements against the goals.
 
-# The activity planner application should provide the following core functionality:
+## The activity planner application should provide the following core functionality:
 * Training goals can be added.
 * Training goals can be removed.
 * Training goals can be modified.
@@ -23,7 +23,7 @@ training schedule. You can assume that anyone who has the link has permission to
 week’s goals and/or achievements.
 
 
-# To run the application do the following:
+## To run the application do the following:
 
 1. To start the Express JS, open the command prompt and execute the command below: 
 # node app.js
