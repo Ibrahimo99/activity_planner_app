@@ -1,4 +1,4 @@
-# Activity Planner Application
+# Activity Planner Web Application
 
 The application allows the user to define their own training schedule for each week. Users of the
 application can also record their actual achievements. These training goals and achievements are
