@@ -30,5 +30,5 @@ week’s goals and/or achievements.
 2. To start the Mongodb, open another command prompt and execute the command below: 
 ### mongod --port 27019
 
-### PS: Make sure that all required installations and configurations have been made. 
+#### PS: Make sure that all required installations and configurations have been made. 
 To view software requirements open the package.json file.
