@@ -41,7 +41,7 @@ app.use(methodOverride());
 app.use(cookieParser('CEAF3FA4-F385-49AA-8FE4-54766A9874F1'));
 app.use(session({
   secret: '59B93087-78BC-4EB9-993A-A61FC844F6C9',
-  resave: true,
+  resave: false,
   saveUninitialized: true
 }));
 app.use(csrf());
@@ -63,15 +63,20 @@ app.param('task_id', function(req, res, next, taskId) {
 });
 
 
-app.get('/', routes.index);
+//app.get('/', routes.index);
+app.get('/', users.renderLogin);
 app.get('/tasks', tasks.list);
 app.post('/tasks', tasks.markAllCompleted)
 app.post('/tasks', tasks.add);
 app.post('/tasks/:task_id', tasks.markCompleted);
 app.delete('/tasks/:task_id', tasks.del);
 app.get('/tasks_completed/completed', completed_list.completed);
-app.get('/users', users.renderLogin);
+app.get('/login', users.renderLogin);
+app.post('/login', users.login);
 app.get('/register', users.renderRegister);
+app.post('/register', users.register);
+
+
 
 
 app.all('*', function(req, res){

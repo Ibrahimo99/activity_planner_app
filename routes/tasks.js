@@ -4,7 +4,8 @@
  */
 
 exports.list = function(req, res, next){
-  req.db.tasks.find({completed: false}).toArray(function(error, tasks){
+  console.info('session is ' +req.session.username);
+  req.db.tasks.find({completed: false, username:req.session.username}).toArray(function(error, tasks){
     if (error) return next(error);
     res.render('tasks', {
       title: 'Activity List',
@@ -18,7 +19,8 @@ exports.add = function(req, res, next){
   req.db.tasks.save({
     name: req.body.name,
     createTime: new Date(),
-    completed: false
+    completed: false,
+    username: req.session.username
   }, function(error, task){
     if (error) return next(error);
     if (!task) return next(new Error('Failed to save.'));

@@ -7,7 +7,8 @@ block content
     div.row.register-form
       div.col.s6.offset-s3.card-panel.z-depth-4
         div.row.center.title
-        form#form_register(name='register', method='POST', action='/register')
+        form#form_register(name='register', method='post', action='/register')
+          input(type='hidden', value=locals._csrf, name='_csrf')
           div.col.s12
             div.row
                 div.input-field.col.s6
