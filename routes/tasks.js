@@ -29,7 +29,7 @@ exports.add = function(req, res, next){
   })
 };
 
-exports.markAllCompleted = function(req, res, next) {
+exports.edit = function(req, res, next) {
   if (!req.body.all_done || req.body.all_done !== 'true') return next();
   req.db.tasks.update({
     completed: false
